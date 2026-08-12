@@ -1,0 +1,793 @@
+/* FinTech Trust Theme (Purple Theme with Golden Title Highlights & CTAs) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-navy: #090412;
+  --bg-slate: #150B27;
+  --bg-card-hover: #21103A;
+  
+  --accent-gold: #F5C227;
+  --accent-gold-glow: rgba(245, 194, 39, 0.5);
+  
+  --accent-purple: #9D4EDD;
+  --accent-purple-glow: rgba(157, 78, 221, 0.5);
+  --accent-purple-light: #C084FC;
+  
+  --text-primary: #F8F9FA;
+  --text-muted: #C084FC;
+  --border-subtle: rgba(157, 78, 221, 0.3);
+}
+
+body {
+  background-color: var(--bg-navy);
+  color: var(--text-primary);
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+code, kbd, pre, .font-normal {
+  font-family: 'Outfit', 'Inter', sans-serif;
+}
+
+/* Background Cyber Grid & Corporate Ambient Glows */
+.bg-cyber-grid {
+  background-image: 
+    linear-gradient(to right, rgba(157, 78, 221, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(157, 78, 221, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.glow-gold {
+  box-shadow: 0 0 25px var(--accent-gold-glow);
+}
+
+.glow-purple {
+  box-shadow: 0 0 25px var(--accent-purple-glow);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 14px var(--accent-gold-glow);
+}
+
+.text-glow-purple {
+  text-shadow: 0 0 14px var(--accent-purple-glow);
+}
+
+/* Glassmorphism Cards with Purple obsidian & Gold/Purple Accents */
+.glass-card {
+  background: rgba(21, 11, 39, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(157, 78, 221, 0.3);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: var(--accent-purple);
+  box-shadow: 0 8px 32px rgba(157, 78, 221, 0.4);
+  transform: translateY(-3px);
+}
+
+.glass-card-gold {
+  background: linear-gradient(135deg, rgba(245, 194, 39, 0.12) 0%, rgba(21, 11, 39, 0.92) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 194, 39, 0.45);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-gold:hover {
+  border-color: var(--accent-gold);
+  box-shadow: 0 8px 32px rgba(245, 194, 39, 0.45);
+  transform: translateY(-3px);
+}
+
+.glass-card-purple {
+  background: linear-gradient(135deg, rgba(157, 78, 221, 0.2) 0%, rgba(21, 11, 39, 0.92) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(157, 78, 221, 0.45);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-purple:hover {
+  border-color: var(--accent-purple-light);
+  box-shadow: 0 8px 32px rgba(157, 78, 221, 0.5);
+  transform: translateY(-3px);
+}
+
+/* Gold & Purple Micro Accent Bar */
+.fintech-gold-stripe {
+  height: 3px;
+  background: linear-gradient(90deg, #9D4EDD 0%, #F5C227 50%, #C084FC 100%);
+}
+
+.fintech-badge-border {
+  border-image: linear-gradient(135deg, #F5C227, #9D4EDD, #F8F9FA) 1;
+}
+
+/* Pulse Animations */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 8px #F5C227); }
+  50% { opacity: 1; filter: drop-shadow(0 0 16px #F5C227); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090412;
+}
+::-webkit-scrollbar-thumb {
+  background: #21103A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F5C227;
+}
+
+/* Terminal & Code Block styling */
+.terminal-window {
+  background: #0D061A;
+  border: 1px solid rgba(157, 78, 221, 0.35);
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 25px rgba(157, 78, 221, 0.2);
+}
+
+/* FinTech Button Styles - High Impact Gold CTAs */
+.btn-gold {
+  background: linear-gradient(135deg, #F5C227 0%, #FFE082 50%, #F5C227 100%);
+  color: #090412;
+  font-weight: 800;
+  box-shadow: 0 4px 25px rgba(245, 194, 39, 0.45);
+  transition: all 0.25s ease;
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #FFD54F 0%, #FFF59D 50%, #FFD54F 100%);
+  box-shadow: 0 6px 35px rgba(245, 194, 39, 0.7);
+  transform: translateY(-2px);
+  color: #090412;
+}
+
+.btn-purple {
+  background: linear-gradient(135deg, #9D4EDD 0%, #C084FC 50%, #8A2BE2 100%);
+  color: #FFFFFF;
+  font-weight: 800;
+  box-shadow: 0 4px 20px rgba(157, 78, 221, 0.4);
+  transition: all 0.25s ease;
+}
+
+.btn-purple:hover {
+  background: linear-gradient(135deg, #A855F7 0%, #E9D5FF 50%, #9D4EDD 100%);
+  box-shadow: 0 6px 30px rgba(157, 78, 221, 0.65);
+  transform: translateY(-2px);
+}
+
+.btn-outline-gold {
+  background: rgba(245, 194, 39, 0.08);
+  border: 1.5px solid rgba(245, 194, 39, 0.5);
+  color: #F5C227;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.btn-outline-gold:hover {
+  background: linear-gradient(135deg, #F5C227 0%, #FFE082 100%);
+  border-color: #F5C227;
+  color: #090412;
+  box-shadow: 0 0 20px rgba(245, 194, 39, 0.5);
+}
+
+.btn-outline-purple {
+  background: rgba(157, 78, 221, 0.1);
+  border: 1.5px solid rgba(157, 78, 221, 0.45);
+  color: #C084FC;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.btn-outline-purple:hover {
+  background: rgba(157, 78, 221, 0.25);
+  border-color: #9D4EDD;
+  color: #FFFFFF;
+  box-shadow: 0 0 20px rgba(157, 78, 221, 0.45);
+}
+
+/* Aviator Canvas Frame */
+.aviator-canvas-container {
+  position: relative;
+  border: 1px solid rgba(245, 194, 39, 0.35);
+  background: radial-gradient(circle at center, #1C122C 0%, #07060A 100%);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(157, 78, 221, 0.25);
+}
+
+/* Floating WhatsApp CTA Widget (Icon Only Circle) */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #FFFFFF !important;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none !important;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 16px 32px rgba(37, 211, 102, 0.65);
+  color: #FFFFFF !important;
+}
+
+@keyframes pulse-whatsapp {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-pulse {
+  animation: pulse-whatsapp 2s infinite;
+}
+
+/* Mobile Responsive Optimization Rules */
+@media (max-width: 640px) {
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1, h2, h3, h4, p, span, div {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .whatsapp-float {
+    bottom: 16px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
+  }
+
+  /* Prevent container padding clipping */
+  .glass-card-gold {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* ==========================================================================
+   Infographic 6-Step Launch Section Component (Reference Infographic Style)
+   ========================================================================== */
+.step-infographic-card {
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+.step-infographic-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Left Step Number Block */
+.step-number-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 68px;
+  padding: 18px 8px;
+  z-index: 10;
+  position: relative;
+}
+
+.step-num {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.step-label {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* Step Color Variants (Strict Purple & Gold Palette) */
+.step-coral .step-num, .step-coral .step-label { color: #C084FC; }
+.step-orange .step-num, .step-orange .step-label { color: #F5C227; }
+.step-cyan .step-num, .step-cyan .step-label { color: #9D4EDD; }
+.step-gold .step-num, .step-gold .step-label { color: #F5C227; }
+.step-purple .step-num, .step-purple .step-label { color: #C084FC; }
+.step-emerald .step-num, .step-emerald .step-label { color: #F5C227; }
+
+/* Feature Framed Cards (Strict Purple & Gold Theme) */
+.feature-framed-card {
+  position: relative;
+  border-radius: 24px;
+  padding: 2px;
+  background: linear-gradient(135deg, rgba(157, 78, 221, 0.4) 0%, rgba(157, 78, 221, 0.15) 100%);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(9, 4, 18, 0.5);
+}
+
+.feature-framed-card:hover {
+  background: linear-gradient(135deg, rgba(245, 194, 39, 0.6) 0%, rgba(157, 78, 221, 0.5) 100%);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(157, 78, 221, 0.3);
+}
+
+.feature-card-inner {
+  border-radius: 22px;
+  background-color: #150B27;
+  padding: 28px 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(157, 78, 221, 0.25);
+  transition: all 0.35s ease;
+}
+
+.feature-framed-card:hover .feature-card-inner {
+  background-color: #1A0D30;
+  border-color: rgba(245, 194, 39, 0.4);
+}
+
+.feature-icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: rgba(157, 78, 221, 0.18);
+  border: 1px solid rgba(157, 78, 221, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  margin-bottom: 20px;
+  transition: all 0.35s ease;
+}
+
+.feature-framed-card:hover .feature-icon-circle {
+  background: rgba(245, 194, 39, 0.2);
+  border-color: rgba(245, 194, 39, 0.6);
+  transform: scale(1.1);
+}
+
+/* Main Card Body with Ribbon Notch Fold Effect */
+.step-content-box {
+  flex: 1;
+  position: relative;
+  background: linear-gradient(135deg, rgba(21, 11, 39, 0.98) 0%, rgba(13, 6, 26, 0.95) 100%);
+  backdrop-filter: blur(12px);
+  border-radius: 0 24px 24px 0;
+  padding: 24px 22px 24px 28px;
+  margin-left: -6px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  transition: all 0.35s ease;
+  border-left: none !important;
+}
+
+/* Left Chevron / Arrow Fold Cut Connecting Tab */
+.step-content-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -16px;
+  width: 16px;
+  height: 100%;
+  background: rgba(21, 11, 39, 0.98);
+  clip-path: polygon(100% 0, 100% 100%, 0 80%, 0 20%);
+  z-index: 5;
+}
+
+/* Glowing Border & Bottom Accent Line */
+.border-coral {
+  border: 1.5px solid rgba(255, 107, 107, 0.4);
+  box-shadow: 0 12px 28px rgba(255, 107, 107, 0.15);
+}
+.step-infographic-card:hover .border-coral {
+  border-color: #FF6B6B;
+  box-shadow: 0 20px 40px rgba(255, 107, 107, 0.3);
+}
+
+.border-orange {
+  border: 1.5px solid rgba(255, 159, 28, 0.4);
+  box-shadow: 0 12px 28px rgba(255, 159, 28, 0.15);
+}
+.step-infographic-card:hover .border-orange {
+  border-color: #FF9F1C;
+  box-shadow: 0 20px 40px rgba(255, 159, 28, 0.3);
+}
+
+.border-cyan {
+  border: 1.5px solid rgba(72, 202, 228, 0.4);
+  box-shadow: 0 12px 28px rgba(72, 202, 228, 0.15);
+}
+.step-infographic-card:hover .border-cyan {
+  border-color: #00E5FF;
+  box-shadow: 0 20px 40px rgba(72, 202, 228, 0.3);
+}
+
+.border-gold {
+  border: 1.5px solid rgba(245, 194, 39, 0.4);
+  box-shadow: 0 12px 28px rgba(245, 194, 39, 0.15);
+}
+.step-infographic-card:hover .border-gold {
+  border-color: #F5C227;
+  box-shadow: 0 20px 40px rgba(245, 194, 39, 0.3);
+}
+
+.border-purple {
+  border: 1.5px solid rgba(157, 78, 221, 0.4);
+  box-shadow: 0 12px 28px rgba(157, 78, 221, 0.15);
+}
+.step-infographic-card:hover .border-purple {
+  border-color: #9D4EDD;
+  box-shadow: 0 20px 40px rgba(157, 78, 221, 0.35);
+}
+
+.border-emerald {
+  border: 1.5px solid rgba(46, 196, 182, 0.4);
+  box-shadow: 0 12px 28px rgba(46, 196, 182, 0.15);
+}
+.step-infographic-card:hover .border-emerald {
+  border-color: #2EC4B6;
+  box-shadow: 0 20px 40px rgba(46, 196, 182, 0.3);
+}
+
+@media (max-width: 640px) {
+  .step-number-box {
+    min-width: 54px;
+    padding: 14px 4px;
+  }
+  .step-num {
+    font-size: 1.75rem;
+  }
+  .step-content-box {
+    padding: 18px 16px 18px 20px;
+  }
+}
+
+/* ==========================================================================
+   Feature Framed Cards Component (Reference Image 1 Style - No Step Numbers)
+   ========================================================================== */
+.feature-framed-card {
+  position: relative;
+  padding: 10px;
+  border-radius: 26px;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-framed-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Outer Bracket Trace Border Variations */
+.frame-gold {
+  border: 2px solid rgba(245, 194, 39, 0.35);
+  box-shadow: 0 0 25px rgba(245, 194, 39, 0.1);
+}
+.feature-framed-card:hover.frame-gold {
+  border-color: #F5C227;
+  box-shadow: 0 15px 35px rgba(245, 194, 39, 0.25);
+}
+
+.frame-cyan {
+  border: 2px solid rgba(72, 202, 228, 0.35);
+  box-shadow: 0 0 25px rgba(72, 202, 228, 0.1);
+}
+.feature-framed-card:hover.frame-cyan {
+  border-color: #00E5FF;
+  box-shadow: 0 15px 35px rgba(72, 202, 228, 0.25);
+}
+
+.frame-emerald {
+  border: 2px solid rgba(46, 196, 182, 0.35);
+  box-shadow: 0 0 25px rgba(46, 196, 182, 0.1);
+}
+.feature-framed-card:hover.frame-emerald {
+  border-color: #2EC4B6;
+  box-shadow: 0 15px 35px rgba(46, 196, 182, 0.25);
+}
+
+.frame-coral {
+  border: 2px solid rgba(255, 107, 107, 0.35);
+  box-shadow: 0 0 25px rgba(255, 107, 107, 0.1);
+}
+.feature-framed-card:hover.frame-coral {
+  border-color: #FF6B6B;
+  box-shadow: 0 15px 35px rgba(255, 107, 107, 0.25);
+}
+
+.frame-purple {
+  border: 2px solid rgba(157, 78, 221, 0.35);
+  box-shadow: 0 0 25px rgba(157, 78, 221, 0.15);
+}
+.feature-framed-card:hover.frame-purple {
+  border-color: #9D4EDD;
+  box-shadow: 0 15px 35px rgba(157, 78, 221, 0.35);
+}
+
+.frame-orange {
+  border: 2px solid rgba(255, 159, 28, 0.35);
+  box-shadow: 0 0 25px rgba(255, 159, 28, 0.1);
+}
+.feature-framed-card:hover.frame-orange {
+  border-color: #FF9F1C;
+  box-shadow: 0 15px 35px rgba(255, 159, 28, 0.25);
+}
+
+/* Inner Glass Card Content */
+.feature-card-inner {
+  background: linear-gradient(145deg, rgba(21, 11, 39, 0.96) 0%, rgba(13, 6, 26, 0.98) 100%);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 32px 24px 28px 24px;
+  text-align: center;
+  border: 1px solid rgba(157, 78, 221, 0.25);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Top Icon Circular Badge */
+.feature-icon-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.65rem;
+  margin-bottom: 20px;
+  background: rgba(157, 78, 221, 0.1);
+  border: 1.5px solid rgba(157, 78, 221, 0.3);
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feature-framed-card:hover .feature-icon-circle {
+  transform: scale(1.1) rotate(6deg);
+  background: rgba(157, 78, 221, 0.2);
+}
+
+/* ==========================================================================
+   Offset Accent Card Component (Reference Image 1 Layout)
+   ========================================================================== */
+.offset-accent-card {
+  position: relative;
+  padding: 16px;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.offset-accent-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Top-Left Solid Accent Square Block */
+.offset-solid-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48%;
+  height: 48%;
+  border-radius: 24px 0 0 0;
+  z-index: 1;
+  opacity: 0.9;
+  transition: all 0.35s ease;
+}
+
+/* Bottom-Right Hollow Accent Outline Frame */
+.offset-outline-bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 58%;
+  height: 58%;
+  border-radius: 0 0 24px 0;
+  border-right: 3px solid;
+  border-bottom: 3px solid;
+  z-index: 1;
+  transition: all 0.35s ease;
+}
+
+/* Theme Color Variants for Solid & Outline Elements */
+/* Gold Variant */
+.offset-gold .offset-solid-bg {
+  background: linear-gradient(135deg, #F5C227 0%, #B89020 100%);
+}
+.offset-gold .offset-outline-bg {
+  border-color: #F5C227;
+  box-shadow: 0 10px 25px rgba(245, 194, 39, 0.2);
+}
+.offset-gold:hover .offset-outline-bg {
+  box-shadow: 0 15px 35px rgba(245, 194, 39, 0.45);
+}
+
+/* Purple Variant */
+.offset-purple .offset-solid-bg {
+  background: linear-gradient(135deg, #7B2CBF 0%, #9D4EDD 100%);
+}
+.offset-purple .offset-outline-bg {
+  border-color: #9D4EDD;
+  box-shadow: 0 10px 25px rgba(157, 78, 221, 0.25);
+}
+.offset-purple:hover .offset-outline-bg {
+  box-shadow: 0 15px 35px rgba(157, 78, 221, 0.5);
+}
+
+/* Main Floating Card Container */
+.offset-card-main {
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(145deg, rgba(21, 11, 39, 0.97) 0%, rgba(9, 4, 18, 0.98) 100%);
+  backdrop-filter: blur(16px);
+  border-radius: 20px;
+  padding: 36px 30px;
+  border: 1px solid rgba(157, 78, 221, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  margin: 10px;
+  height: calc(100% - 20px);
+  transition: all 0.35s ease;
+}
+
+/* ==========================================================================
+   Ribbon Fold Layered Infographic Card (Reference Image 2 Style)
+   ========================================================================== */
+.ribbon-fold-card {
+  position: relative;
+  padding: 12px 8px;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ribbon-fold-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Back Layer: Colored Skewed Backdrop Banner */
+.ribbon-backdrop {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  z-index: 1;
+  transform: rotate(-3deg) scale(0.98);
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.ribbon-fold-card:hover .ribbon-backdrop {
+  transform: rotate(-1deg) scale(1.02);
+}
+
+/* Color Accent Variations for Backdrop */
+.ribbon-purple .ribbon-backdrop {
+  background: linear-gradient(135deg, #7B2CBF 0%, #9D4EDD 100%);
+}
+
+.ribbon-gold .ribbon-backdrop {
+  background: linear-gradient(135deg, #F5C227 0%, #B89020 100%);
+}
+
+/* Front Layer: Elevated Dark Glass Card */
+.ribbon-card-front {
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(145deg, rgba(21, 11, 39, 0.98) 0%, rgba(9, 4, 18, 0.99) 100%);
+  backdrop-filter: blur(16px);
+  border-radius: 20px;
+  padding: 32px 24px 28px 24px;
+  text-align: center;
+  border: 1px solid rgba(157, 78, 221, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+/* Top Icon Wrapper */
+.ribbon-icon-wrapper {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.35s ease;
+}
+
+.ribbon-purple .ribbon-icon-wrapper { color: #C084FC; }
+.ribbon-gold .ribbon-icon-wrapper { color: #F5C227; }
+
+.ribbon-fold-card:hover .ribbon-icon-wrapper {
+  transform: scale(1.1);
+}
+
+/* Title & Description */
+.ribbon-title {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+  font-family: 'Outfit', sans-serif;
+}
+
+.ribbon-desc {
+  font-size: 0.875rem;
+  color: #CBD5E1;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+/* Bottom Circular Badge with Step Number (01, 02, 03, 04, 05, 06) */
+.ribbon-number-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.05rem;
+  font-family: 'Outfit', sans-serif;
+  color: #FFFFFF;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.ribbon-purple .ribbon-number-circle { background: linear-gradient(135deg, #7B2CBF 0%, #9D4EDD 100%); }
+.ribbon-gold .ribbon-number-circle { background: linear-gradient(135deg, #F5C227 0%, #B89020 100%); }
+
+.ribbon-fold-card:hover .ribbon-number-circle {
+  transform: scale(1.12);
+}
