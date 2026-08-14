@@ -308,6 +308,12 @@ code, kbd, pre, .font-normal {
   .ribbon-desc {
     margin-bottom: 1rem;
   }
+
+  /* Compact Mobile Button Sizing */
+  .btn-gold, .btn-purple, .btn-outline-gold, .btn-outline-purple {
+    max-width: 100%;
+    word-break: normal;
+  }
 }
 
 /* ==========================================================================
