@@ -283,9 +283,30 @@ code, kbd, pre, .font-normal {
     height: 48px;
   }
 
-  /* Prevent container padding clipping */
-  .glass-card-gold {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  /* Compact Mobile Spacing & Card Padding */
+  .glass-card-purple, .glass-card {
+    padding: 1.25rem;
+  }
+
+  .offset-card-main {
+    padding: 1.25rem 1rem;
+    margin: 6px;
+  }
+
+  .offset-accent-card {
+    padding: 8px;
+  }
+
+  .feature-card-inner {
+    padding: 1.25rem 1rem;
+  }
+
+  .ribbon-card-front {
+    padding: 1.25rem 1rem;
+  }
+
+  .ribbon-desc {
+    margin-bottom: 1rem;
   }
 }
 
